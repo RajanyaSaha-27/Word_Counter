@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Counter</title>
+    <style>
+        *{
+            background-color: floralwhite;
+        }
+        h1{
+            color: rgb(252, 7, 133);
+            text-align: center;
+            background-color: floralwhite;
+        }
+        button{
+            display: block;
+            margin: auto;
+            background-color:#fcba03;
+        }
+        textarea{
+            display: block;
+            margin: auto;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Count words easily !!</h1>
+    <form method="POST">
+        <textarea name="text" rows="10" cols="150" placeholder="Enter or type your text here"></textarea><br><br>
+        <button type="submit">Count Words</button><br>
+    </form>
+    {% if word_count is not none %}
+        <h2>Word Count : {{ word_count }}</h2>
+    {% endif %}
+</body>
+</html>
